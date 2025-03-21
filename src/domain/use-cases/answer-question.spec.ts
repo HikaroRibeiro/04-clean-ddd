@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { test, describe, expect } from 'vitest'
 import { AnswerQuestionUseCase } from './answer-question'
 import { AnswerRepository } from '../repositories/answer-repository'
 import { Answer } from '../entities/answer'
@@ -13,7 +12,7 @@ describe('Teste 1', () => {
     const answerQuestion = new AnswerQuestionUseCase(fakeAnswerRepository)
 
     const answer = await answerQuestion.execute({
-      contentAnswer: 'Nova resposta',
+      content: 'Nova resposta',
       instructorId: '1',
       questionId: '1',
     })

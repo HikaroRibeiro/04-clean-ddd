@@ -1,4 +1,5 @@
 /* eslint-disable no-useless-constructor */
+import { UniqueEntityID } from '../../core/entities/unique-entity-id'
 import { Answer } from '../entities/answer'
 import { AnswerRepository } from '../repositories/answer-repository'
 
@@ -6,7 +7,7 @@ import { AnswerRepository } from '../repositories/answer-repository'
 interface AnswerQuestionUseCaseRequest {
   instructorId: string
   questionId: string
-  contentAnswer: string
+  content: string
 }
 
 export class AnswerQuestionUseCase {
@@ -15,12 +16,12 @@ export class AnswerQuestionUseCase {
   async execute({
     instructorId,
     questionId,
-    contentAnswer,
+    content,
   }: AnswerQuestionUseCaseRequest) {
-    const answer = new Answer({
-      content: contentAnswer,
-      authorId: instructorId,
-      questionId,
+    const answer = Answer.create({
+      content,
+      authorId: new UniqueEntityID(instructorId),
+      questionId: new UniqueEntityID(questionId),
     })
 
     await this.answerRepository.create(answer)
