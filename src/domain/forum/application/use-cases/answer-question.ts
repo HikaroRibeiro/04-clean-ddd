@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-constructor */
-import { UniqueEntityID } from '../../core/entities/unique-entity-id'
-import { Answer } from '../entities/answer'
+import { UniqueEntityID } from '@/core/entities/unique-entity-id'
+import { Answer } from '../../enterprise/entities/answer'
 import { AnswerRepository } from '../repositories/answer-repository'
 
 /* eslint-disable @typescript-eslint/no-unused-vars */

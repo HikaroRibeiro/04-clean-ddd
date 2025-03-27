@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { AnswerQuestionUseCase } from './answer-question'
 import { AnswerRepository } from '../repositories/answer-repository'
-import { Answer } from '../entities/answer'
+import { Answer } from '../../enterprise/entities/answer'
 
 const fakeAnswerRepository: AnswerRepository = {
   create: async (answer: Answer) => {},
 }
 
-describe('Teste 1', () => {
+describe('Use Cases Test', () => {
   test('Create an answer', async () => {
     const answerQuestion = new AnswerQuestionUseCase(fakeAnswerRepository)
 
