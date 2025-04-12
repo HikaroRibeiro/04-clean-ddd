@@ -8,6 +8,7 @@ import {
 
 /* O tipo "Partial" diz que, posso receber todas as propriedades de Question, mas serão opcionais */
 /* "...override" sobrescrever qualquer informação passada no override como uma das propriedades */
+/* Instalar a biblioteca Faker */
 
 export function makeQuestion(
   override: Partial<QuestionProps> = {},
