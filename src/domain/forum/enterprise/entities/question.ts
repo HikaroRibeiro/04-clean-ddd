@@ -59,7 +59,7 @@ Para mostrar um preview da resposta com apenas 120 caracteres.
   }
 
   set title(title: string) {
-    this.props.content = title
+    this.props.title = title
     this.props.slug = Slug.createFromText(title)
     this.touch()
   }
