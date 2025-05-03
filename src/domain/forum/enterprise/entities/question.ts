@@ -82,7 +82,7 @@ Para mostrar um preview da resposta com apenas 120 caracteres.
       {
         ...props,
         slug: props.slug ?? Slug.createFromText(props.title),
-        createdAt: new Date(),
+        createdAt: props.createdAt ?? new Date(),
       },
       id,
     )

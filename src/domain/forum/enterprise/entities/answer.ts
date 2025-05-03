@@ -54,7 +54,7 @@ Para mostrar um preview da resposta com apenas 120 caracteres.
     const answer = new Answer(
       {
         ...props,
-        createdAt: new Date(),
+        createdAt: props.createdAt ?? new Date(),
       },
       id,
     )
