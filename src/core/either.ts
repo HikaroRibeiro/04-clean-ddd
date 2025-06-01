@@ -1,0 +1,31 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// Ou um Ou Outro, sucesso ou erro.
+
+// Left = Error
+export class Left<L> {
+  readonly value: L
+
+  constructor(value: L) {
+    this.value = value
+  }
+}
+
+// Right = Sucess
+export class Right<R> {
+  readonly value: R
+
+  constructor(value: R) {
+    this.value = value
+  }
+}
+
+// Trabalhando com tipagens
+export type Either<L, R> = Left<L> | Right<R>
+
+export const left = <L, R>(value: L): Either<L, R> => {
+  return new Left(value)
+}
+
+export const right = <L, R>(value: R): Either<L, R> => {
+  return new Right(value)
+}
