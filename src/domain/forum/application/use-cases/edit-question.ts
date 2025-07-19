@@ -64,9 +64,9 @@ export class EditQuestionUseCase {
 
     questionAttachmentList.update(questionAttachments)
 
+    question.attachments = questionAttachmentList
     question.title = title
     question.content = content
-    question.attachments = questionAttachmentList
 
     // console.log(`Edit Question Step 4: ${question.title} - ${question.content}`)
 

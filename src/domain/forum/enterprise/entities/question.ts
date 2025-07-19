@@ -77,6 +77,7 @@ Para mostrar um preview da resposta com apenas 120 caracteres.
 
   set attachments(attachments: QuestionAttachmentList) {
     this.props.attachments = attachments
+    this.touch()
   }
 
   set bestAnswerId(bestAnswerId: UniqueEntityID | undefined) {
