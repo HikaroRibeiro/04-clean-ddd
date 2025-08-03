@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { InMemoryNotificationsRepository } from 'test/repositories/in-memory-notifications-repository'
-import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { SendNotificationUseCase } from './send-notification'
 
 let inMemoryNotificationsRepository: InMemoryNotificationsRepository
